@@ -3,7 +3,6 @@
 .article-byline a,
 .archive-year {
   text-decoration: none;
-  text-transform: uppercase;
   color: #666;
   line-height: 1em;
   text-shadow: 0 1px #fff;
@@ -220,7 +219,7 @@ body,
 }
 body {
   background: #fff;
-  font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  font: 14px "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .container {
@@ -303,6 +302,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 24px;
+  border-bottom: 1px solid #eee;
 }
 #main .main-body-header .page-title-link,
 #main .main-body-header i {
@@ -324,7 +324,7 @@ body {
   clear: both;
 }
 #header {
-  background: #fff;
+  background: #26272b;
   padding-bottom: 60px;
   position: relative;
   -webkit-user-select: none;
@@ -387,9 +387,11 @@ body {
 }
 .nav-container {
   padding: 0 15px;
-  background: #fff;
+  background: #33363b;
   z-index: 1;
-  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -1px 0 rgba(0,0,0,0.2), inset 1px 0 0 rgba(0,0,0,0.2), inset -1px 0 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -1px 0 rgba(0,0,0,0.2), inset 1px 0 0 rgba(0,0,0,0.2), inset -1px 0 0 rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -1px 0 rgba(0,0,0,0.2), inset 1px 0 0 rgba(0,0,0,0.2), inset -1px 0 0 rgba(0,0,0,0.2);
 }
 .nav-container:before,
 .nav-container:after {
@@ -457,8 +459,7 @@ body {
   font-size: 16px;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item .main-nav-list-link.current {
-  color: #000;
-  text-shadow: 1px 1px 2px #ccc;
+  color: #ccc;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item .main-nav-list-child {
   top: 100%;
@@ -467,7 +468,7 @@ body {
   overflow: hidden;
   position: absolute;
   width: 180px;
-  background: #fff url("images/opacity-10.png") repeat;
+  background: #33363b url("images/opacity-10.png") repeat;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item .main-nav-list-child li {
   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06);
@@ -509,12 +510,11 @@ body {
   outline: none !important;
   background: none !important;
   line-height: 1.6em;
-  height: 1.6em;
   -webkit-transition: 0.2s ease-in;
   -moz-transition: 0.2s ease-in;
   -ms-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  font: 14px "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: rgba(255,255,255,0.7);
 }
 .search-form-input:focus {
@@ -594,11 +594,10 @@ body {
   border-radius: 3px;
   -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2);
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
-  text-transform: uppercase;
   z-index: 1;
 }
 #sidebar .sidebar-top .social-links .social-tooltip:hover:before {
-  top: -10px;
+  top: -14px;
   right: 8px;
   border: solid;
   border-color: #fff transparent;
@@ -829,7 +828,6 @@ body {
 #recent-post li .item-inner a,
 #recent-post li .item-inner .item-category {
   font-size: 13px;
-  text-transform: uppercase;
 }
 #recent-post li .item-inner a a,
 #recent-post li .item-inner .item-category a {
@@ -858,7 +856,6 @@ body {
 #recent-post li .item-inner .item-date {
   color: #aaa;
   font-size: 13px;
-  text-transform: uppercase;
 }
 #recent-post li:hover .item-thumbnail {
   opacity: 0.8;
@@ -1034,6 +1031,10 @@ a.article-title:hover {
 .article-byline {
   margin-bottom: 10px;
 }
+.article-byline span {
+  display: inline-block;
+  margin-right: 10px;
+}
 .article-entry {
   color: #555;
   font-size: 18px;
@@ -1084,6 +1085,8 @@ a.article-title:hover {
 .article-entry dl {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
+  list-style-type: square;
+  padding-left: 20px;
 }
 .article-entry img,
 .article-entry video {
@@ -1110,7 +1113,7 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.4em;
   margin: 1.6em 20px;
   text-align: center;
@@ -1118,7 +1121,7 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
-  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -1239,7 +1242,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  font: 14px "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   padding: 0 15px;
   color: #555;
   outline: none;
@@ -1517,14 +1520,14 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #2d2d2d;
+  background: #fff;
   margin: 0px;
   padding: 15px 20px;
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
   overflow: auto;
-  color: #ccc;
+  color: #4d4d4c;
   line-height: 22.400000000000002px;
 }
 .article-entry .highlight .gutter pre,
@@ -1562,7 +1565,7 @@ a.article-title:hover {
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
-  color: #999;
+  color: #8e908c;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -1578,6 +1581,7 @@ a.article-title:hover {
   float: right;
 }
 .article-entry .highlight .gutter pre {
+  display: none;
   text-align: right;
   padding-right: 20px;
 }
@@ -1589,7 +1593,7 @@ a.article-title:hover {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #fff;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1615,9 +1619,9 @@ a.article-title:hover {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #2d2d2d;
-  color: #999;
-  font: 0.85em "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  background: #fff;
+  color: #8e908c;
+  font: 0.85em "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -1635,7 +1639,7 @@ pre .title,
 pre .template_comment,
 pre .header,
 pre .javadoc {
-  color: #999;
+  color: #8e908c;
 }
 pre .variable,
 pre .attribute,
@@ -1661,7 +1665,7 @@ pre .important,
 pre .subst,
 pre .clojure .title,
 pre .deletion {
-  color: #f2777a;
+  color: #c82829;
 }
 pre .number,
 pre .preprocessor,
@@ -1674,14 +1678,14 @@ pre .command,
 pre .lisp .body,
 pre .parent,
 pre .haskell .type {
-  color: #f99157;
+  color: #f5871f;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute,
 pre .addition,
 pre .function .title {
-  color: #9c9;
+  color: #718c00;
 }
 pre .string,
 pre .value,
@@ -1689,12 +1693,12 @@ pre .inheritance,
 pre .ruby .symbol,
 pre .symbol .string,
 pre .xml .cdata {
-  color: #9c9;
+  color: #718c00;
 }
 pre .css .hexcolor,
 pre .phpdoc,
 pre .tex .formula {
-  color: #6cc;
+  color: #3e999f;
 }
 pre .function,
 pre .python .decorator,
@@ -1709,11 +1713,11 @@ pre .chunk,
 pre .decorator,
 pre .identifier,
 pre .vhdl {
-  color: #69c;
+  color: #4271ae;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #c9c;
+  color: #8959a8;
 }
 i.icon {
   display: inline-block;

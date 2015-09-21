@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淘宝网前端团队]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://taobaofed.org/"/>
-  <updated>2015-09-21T03:43:20.000Z</updated>
+  <updated>2015-09-21T07:46:53.000Z</updated>
   <id>http://taobaofed.org/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://taobaofed.org/blog/2015/09/21/hello-world/"/>
-    <id>http://taobaofed.org/blog/2015/09/21/hello-world/</id>
-    <published>2015-09-21T03:43:20.000Z</published>
-    <updated>2015-09-21T03:43:20.000Z</updated>
+    <link href="http://taobaofed.org/blog/2015/09/21/zare/"/>
+    <id>http://taobaofed.org/blog/2015/09/21/zare/</id>
+    <published>2015-09-21T07:46:53.000Z</published>
+    <updated>2015-09-21T07:46:53.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -34,6 +34,60 @@
     <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_b]]>
     </summary>
     
+      <category term="前端" scheme="http://taobaofed.org/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://taobaofed.org/blog/2015/09/21/hello-world/"/>
+    <id>http://taobaofed.org/blog/2015/09/21/hello-world/</id>
+    <published>2015-09-21T07:46:47.000Z</published>
+    <updated>2015-09-21T07:46:47.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_b]]>
+    </summary>
+    
+      <category term="前端" scheme="http://taobaofed.org/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello Taobao Fed2]]></title>
+    <link href="http://taobaofed.org/blog/2015/08/04/hello2/"/>
+    <id>http://taobaofed.org/blog/2015/08/04/hello2/</id>
+    <published>2015-08-04T09:27:09.000Z</published>
+    <updated>2015-09-21T07:46:51.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
+<h1 id="一级标题">一级标题</h1><p>本只是想给博客添加个水印，github 上搜索了半天，找了一个比较小巧的库，叫做 images。</p>
+<a id="more"></a>
+<h2 id="二级标题">二级标题</h2><p>这个库的地址是：<a href="https://github.com/zhangyuanwei/node-images" target="_blank" rel="external">https://github.com/zhangyuanwei/node-images</a>，它是一个跨平台极为轻量的图片编解码工具，同时附加了一些图片的操作函数，如：</p>
+<ul>
+<li><code>.size()</code> 比例伸缩</li>
+<li><code>.draw(img, x, y)</code> 在图片上绘制一个图片</li>
+<li><code>.encode()</code> 将图片解码到 buffer 中</li>
+</ul>
+<p>给图片加水印主要就用到了 <code>.draw()</code> 函数。</p>
+<h3 id="三级标题">三级标题</h3><p>首先需要安装 <code>images</code> 库：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> images</span><br></pre></td></tr></table></figure>
+<p>然后开撸，基本代码如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> images = <span class="built_in">require</span>(<span class="string">'images'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> watermarkImg = images(path.join(__dirname, <span class="string">'path/to/watermark.ext'</span>));</span><br><span class="line"><span class="keyword">var</span> sourceImg = images(path.join(__dirname, <span class="string">'path/to/sourceImg.ext'</span>));</span><br><span class="line"><span class="keyword">var</span> savePath = path.join(__dirname, <span class="string">'path/to/saveImg.jpg'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 比如放置在右下角，先获取原图的尺寸和水印图片尺寸</span></span><br><span class="line"><span class="keyword">var</span> sWidth = sourceImg.width();</span><br><span class="line"><span class="keyword">var</span> sHeight = sourceImg.height();</span><br><span class="line"><span class="keyword">var</span> wmWidth = watermarkImg.width();</span><br><span class="line"><span class="keyword">var</span> wmWidth = watermarkImg.height();</span><br><span class="line"></span><br><span class="line">images(sourceImg)</span><br><span class="line">  <span class="comment">// 设置绘制的坐标位置，右下角距离 10px</span></span><br><span class="line">  .draw(watermarkImg, sWidth - wmWidth - <span class="number">10</span>, sHeight - wmHeight - <span class="number">10</span>)</span><br><span class="line">  <span class="comment">// 保存格式会自动识别</span></span><br><span class="line">  .save(savePath);</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
+<h1 id="一级标题">一级标题</h1><p>本只是想给博客添加个水印，github 上搜索了半天，找了一个比较小巧的库，叫做 images。</p>]]>
+    
+    </summary>
+    
   </entry>
   
   <entry>
@@ -41,7 +95,7 @@
     <link href="http://taobaofed.org/blog/2015/08/04/hello/"/>
     <id>http://taobaofed.org/blog/2015/08/04/hello/</id>
     <published>2015-08-04T09:27:08.000Z</published>
-    <updated>2015-09-21T03:43:39.000Z</updated>
+    <updated>2015-09-21T07:46:49.000Z</updated>
     <content type="html"><![CDATA[<p>Hello Blog</p>
 <p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
 ]]></content>
@@ -50,6 +104,8 @@
 <p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
 ]]>
     </summary>
+    
+      <category term="测试" scheme="http://taobaofed.org/categories/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
