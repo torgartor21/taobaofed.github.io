@@ -255,15 +255,14 @@ body {
   display: block;
   padding: 10px 0;
   width: 120px;
-  height: 90px;
+  height: 100px;
   background-image: url("//img.alicdn.com/tps/TB1Nv_wKXXXXXbmXVXXXXXXXXXX-295-195.png");
-  background-position: 0px 27px;
+  background-position: 0px 20px;
   background-repeat: no-repeat;
-  -webkit-background-size: 120px 90px;
-  -moz-background-size: 120px 90px;
-  background-size: 120px 90px;
+  -webkit-background-size: 120px 100px;
+  -moz-background-size: 120px 100px;
+  background-size: 120px 100px;
   position: relative;
-  left: -10px;
 }
 .main-body {
   margin-top: -60px;
@@ -1515,10 +1514,10 @@ a.article-title:hover {
 }
 #footer .logo {
   width: 96px;
-  height: 72px;
-  -webkit-background-size: 96px 72px;
-  -moz-background-size: 96px 72px;
-  background-size: 96px 72px;
+  height: 80px;
+  -webkit-background-size: 96px 80px;
+  -moz-background-size: 96px 80px;
+  background-size: 96px 80px;
 }
 .article-entry pre,
 .article-entry .highlight {
