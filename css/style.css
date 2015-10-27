@@ -255,13 +255,15 @@ body {
   display: block;
   padding: 10px 0;
   width: 120px;
-  height: 120px;
-  background-image: url("images/logo-header.png");
-  background-position: 0px 10px;
+  height: 90px;
+  background-image: url("//img.alicdn.com/tps/TB1Nv_wKXXXXXbmXVXXXXXXXXXX-295-195.png");
+  background-position: 0px 27px;
   background-repeat: no-repeat;
-  -webkit-background-size: 120px 120px;
-  -moz-background-size: 120px 120px;
-  background-size: 120px 120px;
+  -webkit-background-size: 120px 90px;
+  -moz-background-size: 120px 90px;
+  background-size: 120px 90px;
+  position: relative;
+  left: -10px;
 }
 .main-body {
   margin-top: -60px;
@@ -1513,10 +1515,10 @@ a.article-title:hover {
 }
 #footer .logo {
   width: 96px;
-  height: 96px;
-  -webkit-background-size: 96px 96px;
-  -moz-background-size: 96px 96px;
-  background-size: 96px 96px;
+  height: 72px;
+  -webkit-background-size: 96px 72px;
+  -moz-background-size: 96px 72px;
+  background-size: 96px 72px;
 }
 .article-entry pre,
 .article-entry .highlight {
