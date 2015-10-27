@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Taobao Fed Team]]></title>
+  <title><![CDATA[Taobao Fed Team | 淘宝前端开发团队]]></title>
   <subtitle><![CDATA[淘宝前端开发团队]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://taobaofed.org/"/>
