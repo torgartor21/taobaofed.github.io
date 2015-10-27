@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taobaofed.org/blog/2015/10/27/node-subway/</loc>
+    <lastmod>2015-10-27T09:54:30.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/</loc>
     <lastmod>2015-10-27T09:20:16.000Z</lastmod>
   </url>
