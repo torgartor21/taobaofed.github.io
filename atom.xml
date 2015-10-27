@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淘宝前端开发团队]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://taobaofed.org/"/>
-  <updated>2015-10-27T09:00:37.000Z</updated>
+  <updated>2015-10-27T09:20:16.000Z</updated>
   <id>http://taobaofed.org/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/"/>
     <id>http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/</id>
     <published>2015-10-27T07:13:58.000Z</published>
-    <updated>2015-10-27T09:00:37.000Z</updated>
+    <updated>2015-10-27T09:20:16.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB147_oKXXXXXawaXXXXXXXXXXX-640-480.jpg" alt="NodeJS"></p>
 <p>Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。</p>
 <p>Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡开来，诱人的滋味感觉谁都想咬一口，虽然其他语言的酸葡萄理论开始蔓延，但是依旧没有影响到它的推广和发展。在强大的 PHP 和稳定的 Java 之中，慢慢的发芽并占有了一席之地。</p>
