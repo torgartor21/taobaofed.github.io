@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淘宝网前端团队]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://taobaofed.org/"/>
-  <updated>2015-09-21T07:46:53.000Z</updated>
+  <updated>2015-10-27T07:14:38.000Z</updated>
   <id>http://taobaofed.org/</id>
   
   <author>
@@ -15,97 +15,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://taobaofed.org/blog/2015/09/21/zare/"/>
-    <id>http://taobaofed.org/blog/2015/09/21/zare/</id>
-    <published>2015-09-21T07:46:53.000Z</published>
-    <updated>2015-09-21T07:46:53.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <title><![CDATA[致想用 Node.js 的你]]></title>
+    <link href="http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/"/>
+    <id>http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/</id>
+    <published>2015-10-27T07:13:58.000Z</published>
+    <updated>2015-10-27T07:14:38.000Z</updated>
+    <content type="html"><![CDATA[<p>Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。</p>
+<p>Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡开来，诱人的滋味感觉谁都想咬一口，虽然其他语言的酸葡萄理论开始蔓延，但是依旧没有影响到它的推广和发展。在强大的 PHP 和稳定的 Java 之中，慢慢的发芽并占有了一席之地。</p>
+<p>虽说一开始 0.6 版本的 Node.js 像玩具，只能简单做些小工具，但是并不妨碍各种尝试。当初 lua 语言大肆流行，多亏了 wow 的插件体系，暴雪当作粘合剂，而程序员玩家纷纷效仿，一度一夜之间冒出许多 lua 开发的文章。而 Node.js 也似乎是一夜之间，多出了各种新手教程，当然也无非就是安装和敲敲 <code>hello world</code>，但是不管怎么说，软文多了之后，眼球已经被深深的吸引了。</p>
+<p>虽然 python 也可以一句话创建 Server，但是 JS 却是头一回，除了在 windows 上编译费劲外，似乎一切都那么完美。这也是第一次 JS 立足于不同的土地，通过事件驱动和非阻塞 IO，创造了一片新的大陆。</p>
+<p>除了社区的活跃，npm 包管理的问世和内置集成也功不可没。Java 之所以流行，Ant 和 Maven 的工程化套件必不可少，而后者的 JAR 包管理中心化更是将 Java 的共享和社区化推进到了一个新的高度，而 npm 正是 Node.js 版本的仓库，大海中无数种类的鱼，总有你想要的，程序员们总能找到想要的东西，而且正是由于 JS 代码的可见性，借鉴和更新变的非常容易。</p>
+<p>当然 npm 也有它本身的缺陷，模块包的代码质量良莠不齐，不过高质量的代码库总能获得最多的下载量，也算是一个弥补措施了。</p>
+<p>一个服务器并不能满足前端们的好奇心，模仿是天生的，所以之后开始使用 Node.js 来编写各种工具，最直接的就是打包脚本，妥妥的从 YUI Compressor 中解放了出来，后来各种轻语言开始迁移工具，纷纷开始支持，比如 Less 和 Sass。自此开始，Node.js 走上了一条人人都会一点，人人都来咬一口的局面。</p>
+<p>1.0 之前，算是大跃进时期，每个版本都有着非常鲜明的特色和功能。虽然前段时间 io.js 的事情闹得沸沸扬扬，各路人马甚至开始考虑站队的事情，当然最后还是合并了，算是不错的结尾，Node.js 4.0 的时代也算是开始，应该会开始稳健的进步了。</p>
+<p>全栈工程师的 title 也自此开始冒泡，其实一直都有，以前这些从前写到后的人，大多是小公司加班出来的。</p>
+<p>发现写了这么多，大多写了些历史和演变，还是回到其本身。Node.js 本身就是个万精油，什么都能干，但是并不一定拿它干最好，有些事情还是要找对应的语言，比如复杂度很高的计算，那就不应该是它干的。存在既是理由，您拿一把斧头砍树固然好，挖土就不行，所以用之前评估和衡量还是非常之重要。而 Node.js 更擅长处理并发连接，单进程的 JS 语言没有什么死锁的压力，而自由的写法更加使得代码变的有吸引力。</p>
+<p>除了 npm 算是官方提供的包管理之外，似乎没什么官方提供的支持了，这也是 Node.js 的弱项吧，配套比不过其他语言，要啥啥没有，好在社区强大，现在算是成熟许多，debug、profiler 等一应俱全。</p>
+<p>想用 Node.js 的你，必须是一个有耐心、细心的人才能驾驭，可能你会在一整天排查一个内存溢出问题，也可能花上大半天搞定一个莫名其妙的依赖错误，这些都是以前我实实在在碰到过的。不过好在现在 Node.js 的报错规范了许多，大多还是能够一眼就看出问题。</p>
+<p>当然，最后希望你好好的用 Node.js，用好它，那么它就会更好。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_b]]>
+    <![CDATA[<p>Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。</p>
+<p>Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡开来，诱人的滋味感觉谁都想咬一口，虽然其他语]]>
     </summary>
     
-      <category term="前端" scheme="http://taobaofed.org/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="nodejs" scheme="http://taobaofed.org/tags/nodejs/"/>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://taobaofed.org/blog/2015/09/21/hello-world/"/>
-    <id>http://taobaofed.org/blog/2015/09/21/hello-world/</id>
-    <published>2015-09-21T07:46:47.000Z</published>
-    <updated>2015-09-21T07:46:47.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/shoes.jpg" alt="test"><br>Welcome to <a href="http://hexo.io/" target="_b]]>
-    </summary>
-    
-      <category term="前端" scheme="http://taobaofed.org/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello Taobao Fed2]]></title>
-    <link href="http://taobaofed.org/blog/2015/08/04/hello2/"/>
-    <id>http://taobaofed.org/blog/2015/08/04/hello2/</id>
-    <published>2015-08-04T09:27:09.000Z</published>
-    <updated>2015-09-21T07:46:51.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
-<h1 id="一级标题">一级标题</h1><p>本只是想给博客添加个水印，github 上搜索了半天，找了一个比较小巧的库，叫做 images。</p>
-<a id="more"></a>
-<h2 id="二级标题">二级标题</h2><p>这个库的地址是：<a href="https://github.com/zhangyuanwei/node-images" target="_blank" rel="external">https://github.com/zhangyuanwei/node-images</a>，它是一个跨平台极为轻量的图片编解码工具，同时附加了一些图片的操作函数，如：</p>
-<ul>
-<li><code>.size()</code> 比例伸缩</li>
-<li><code>.draw(img, x, y)</code> 在图片上绘制一个图片</li>
-<li><code>.encode()</code> 将图片解码到 buffer 中</li>
-</ul>
-<p>给图片加水印主要就用到了 <code>.draw()</code> 函数。</p>
-<h3 id="三级标题">三级标题</h3><p>首先需要安装 <code>images</code> 库：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> images</span><br></pre></td></tr></table></figure>
-<p>然后开撸，基本代码如下:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> images = <span class="built_in">require</span>(<span class="string">'images'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> watermarkImg = images(path.join(__dirname, <span class="string">'path/to/watermark.ext'</span>));</span><br><span class="line"><span class="keyword">var</span> sourceImg = images(path.join(__dirname, <span class="string">'path/to/sourceImg.ext'</span>));</span><br><span class="line"><span class="keyword">var</span> savePath = path.join(__dirname, <span class="string">'path/to/saveImg.jpg'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 比如放置在右下角，先获取原图的尺寸和水印图片尺寸</span></span><br><span class="line"><span class="keyword">var</span> sWidth = sourceImg.width();</span><br><span class="line"><span class="keyword">var</span> sHeight = sourceImg.height();</span><br><span class="line"><span class="keyword">var</span> wmWidth = watermarkImg.width();</span><br><span class="line"><span class="keyword">var</span> wmWidth = watermarkImg.height();</span><br><span class="line"></span><br><span class="line">images(sourceImg)</span><br><span class="line">  <span class="comment">// 设置绘制的坐标位置，右下角距离 10px</span></span><br><span class="line">  .draw(watermarkImg, sWidth - wmWidth - <span class="number">10</span>, sHeight - wmHeight - <span class="number">10</span>)</span><br><span class="line">  <span class="comment">// 保存格式会自动识别</span></span><br><span class="line">  .save(savePath);</span><br></pre></td></tr></table></figure>]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
-<h1 id="一级标题">一级标题</h1><p>本只是想给博客添加个水印，github 上搜索了半天，找了一个比较小巧的库，叫做 images。</p>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello Taobao Fed]]></title>
-    <link href="http://taobaofed.org/blog/2015/08/04/hello/"/>
-    <id>http://taobaofed.org/blog/2015/08/04/hello/</id>
-    <published>2015-08-04T09:27:08.000Z</published>
-    <updated>2015-09-21T07:46:49.000Z</updated>
-    <content type="html"><![CDATA[<p>Hello Blog</p>
-<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Hello Blog</p>
-<p><img src="http://blog.zhangruipeng.me/hexo-theme-icarus/gallery/guitarist.jpg" alt="test"></p>
-]]>
-    </summary>
-    
-      <category term="测试" scheme="http://taobaofed.org/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="NodeJS" scheme="http://taobaofed.org/categories/NodeJS/"/>
     
   </entry>
   
