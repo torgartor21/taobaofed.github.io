@@ -2,18 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://taobaofed.org/about/index.html</loc>
-    <lastmod>2015-10-27T11:29:25.000Z</lastmod>
+    <loc>http://taobaofed.org/blog/2015/11/12/html-minify-service/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/09/web-performance/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/30/nodejs-timer/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/05/nodejs-errors/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/03/nodejs-cluster/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/10/nodejs-cluster-2/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://taobaofed.org/blog/2015/10/27/node-subway/</loc>
-    <lastmod>2015-10-27T10:02:41.000Z</lastmod>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/06/jstracker-data-processing/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/28/try-catch-runing-problem/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/11/flexbox-in-mobile-web/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/</loc>
-    <lastmod>2015-10-27T09:20:16.000Z</lastmod>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/28/disaster-recovery-at-taobao-home-page/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/29/deep-into-node-1/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/11/02/buy-component/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/blog/2015/10/28/auto-layout-in-h5-project/</loc>
+    <lastmod>2015-11-12T05:29:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/baidu_verify_5fUx89iHBE.html</loc>
+    <lastmod>2015-11-06T14:48:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/google155be79d7690060c.html</loc>
+    <lastmod>2015-11-06T14:15:16.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/about/index.html</loc>
+    <lastmod>2015-11-04T11:35:34.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taobaofed.org/404.html</loc>
+    <lastmod>2015-10-28T03:42:00.000Z</lastmod>
   </url>
   
 </urlset>

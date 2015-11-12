@@ -58,6 +58,7 @@
     window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
   });
 
+  if($("#facebook")) return;
   // Caption
   $('.article-entry').each(function(i) {
     $(this).find('img').each(function() {

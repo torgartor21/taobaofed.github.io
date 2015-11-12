@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: Web开发 | Taobao Fed | 淘宝前端开发团队</title>
+  <title>Category: Web开发 | Taobao FED | 淘宝前端团队</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="用技术为体验提供无限可能">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Taobao Fed | 淘宝前端开发团队">
+<meta property="og:title" content="Taobao FED | 淘宝前端团队">
 <meta property="og:url" content="http://taobaofed.org/categories/Web开发/index.html">
-<meta property="og:site_name" content="Taobao Fed | 淘宝前端开发团队">
+<meta property="og:site_name" content="Taobao FED | 淘宝前端团队">
 <meta property="og:description" content="用技术为体验提供无限可能">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Taobao Fed | 淘宝前端开发团队">
+<meta name="twitter:title" content="Taobao FED | 淘宝前端团队">
 <meta name="twitter:description" content="用技术为体验提供无限可能">
+  
+    <link rel="alternative" href="http://taobaofed.org/atom.xml" title="Taobao FED | 淘宝前端团队" type="application/atom+xml">
+    <link rel="alternative" href="http://taobaofed.org/atom.xml" title="Taobao FED | 淘宝前端团队" type="application/rss+xml">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -34,9 +37,11 @@
   
 
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  <script src="/js/jquery-2.1.3.min.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <img src="//img.alicdn.com/tps/TB1GKckKXXXXXXIXpXXXXXXXXXX-400-400.png" alt="Taobao FED" style="position:absolute;left:-9999px">
   <div id="wrap">
     <header id="header">
   <div id="header-outer" class="outer">
@@ -48,7 +53,7 @@
           </h1>
           
             <h2 class="subtitle-wrap">
-              <p class="subtitle">淘宝前端开发团队</p>
+              <p class="subtitle">淘宝前端团队（FED）</p>
               <p class="description">用技术为体验提供无限可能</p>
             </h2>
           
@@ -67,13 +72,19 @@
               
                 
                 <li class="main-nav-list-item" >
+                  <a class="main-nav-list-link" href="/categories/Node-js/">Node.js</a>
+                </li>
+                
+              
+                
+                <li class="main-nav-list-item" >
                   <a class="main-nav-list-link" href="/categories/无线开发/">无线开发</a>
                 </li>
                 
               
                 
                 <li class="main-nav-list-item" >
-                  <a class="main-nav-list-link" href="/categories/工具&平台/">工具&amp;平台</a>
+                  <a class="main-nav-list-link" href="/categories/工具-平台/">工具&amp;平台</a>
                 </li>
                 
               
@@ -131,26 +142,138 @@
   <article class="article article-summary">
     <div class="article-summary-inner">
       
-<a href="/blog/2015/10/27/enter-the-door-of-nodejs/" class="thumbnail">
+<a href="/blog/2015/11/09/web-performance/" class="thumbnail">
   
-    <span style="background-image:url(https://img.alicdn.com/tps/TB147_oKXXXXXawaXXXXXXXXXXX-640-480.jpg
-)" alt="致想用 Node.js 的你" class="thumbnail-image"></span>
+    <span style="background-image:url(https://img.alicdn.com/tps/TB1MByrKpXXXXc.aXXXXXXXXXXX-900-500.jpg
+)" alt="如何评价页面的性能" class="thumbnail-image"></span>
   
 </a>
 
       <div class="article-meta">
         <p class="category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
-        <p class="date"><time datetime="2015-10-27T07:13:58.000Z" itemprop="datePublished">2015-10-27</time></p>
+        <p class="date"><time datetime="2015-11-09T03:14:41.000Z" itemprop="datePublished">2015-11-09</time></p>
       </div>
       <h2 class="article-title">
-        <a href="/blog/2015/10/27/enter-the-door-of-nodejs/" class="title">致想用 Node.js 的你</a>
+        <a href="/blog/2015/11/09/web-performance/" class="title">如何评价页面的性能</a>
       </h2>
       <p class="article-excerpt">
         
         
-Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。
-Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡开来，诱人的滋味感觉谁都想咬一口，虽然其他语言的酸葡萄理论开始蔓延，但是依旧没有影响到它的推广和发展。在强大的 PHP 和稳定的 Java 之中，慢慢的发芽并占有了一席之地。
-虽说一
+引言前端页面的性能一直都是一个热议的话题，从老早的“军规”开始我们就一直在关注页面的性能问题。
+在前面巨人们的身后每个人也有自己的一些页面性能的经验，本文主要是介绍如何评估页面加载完成之后的性能。
+浏览器如何渲染一个页面先附上一张图片：
+
+这是在网上找的一张图，虽然是用来描述 performance 的 API 但是也很好的描述了浏览器是怎么处理一个页面渲染的。
+这是我们在 PC 时代考虑的浏览
+      </p>
+    </div>
+  </article>
+
+    
+  
+    
+    
+    
+    
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      
+<a href="/blog/2015/11/02/buy-component/" class="thumbnail">
+  
+    <span style="background-image:url(https://img.alicdn.com/tps/TB1FYNoKpXXXXc_XpXXXXXXXXXX-900-500.jpg
+)" alt="已买到的宝贝前端组件化探索" class="thumbnail-image"></span>
+  
+</a>
+
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+        <p class="date"><time datetime="2015-11-02T05:44:27.000Z" itemprop="datePublished">2015-11-02</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/blog/2015/11/02/buy-component/" class="title">已买到的宝贝前端组件化探索</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        
+随着已买到的宝贝组件化全网回归完成，项目开发工作终于告一段落了，接下来便是 Beta ，灰度发布。我也终于有了时间来总结一下整个项目。
+同学们普遍对 PC 业务如何进行组件化感兴趣，在此就把我在项目中的思考过程，积累的经验写出来与大家分享。
+先来介绍一下已买到的宝贝这个业务：
+已买到的宝贝是全网（淘宝／天猫）买家进行订单相关操作的平台（订单相关的操作如：取消订单，确认收货，订单搜索等），承载了全
+      </p>
+    </div>
+  </article>
+
+    
+      </div>
+    
+  
+    
+    
+    
+    
+      <div class="article-row">
+    
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      
+<a href="/blog/2015/10/28/disaster-recovery-at-taobao-home-page/" class="thumbnail">
+  
+    <span style="background-image:url(http://gtms02.alicdn.com/tps/i2/TB1uf_3KXXXXXcLXVXXlzJZ8pXX-900-500.jpg
+)" alt="淘宝首页兜底容灾方案" class="thumbnail-image"></span>
+  
+</a>
+
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+        <p class="date"><time datetime="2015-10-28T02:23:53.000Z" itemprop="datePublished">2015-10-28</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/blog/2015/10/28/disaster-recovery-at-taobao-home-page/" class="title">淘宝首页兜底容灾方案</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        
+淘宝首页是淘宝的一个大流量入口，平均每天的 PV 量达到一亿。而页面上的数据很多都是通过接口调用，不同的接口对应着不同的系统，每个系统的稳定性是不太一样的。
+一、兜底容灾的必要性一个日均承载一亿流量的网页，会经常出现哪些问题呢？
+
+某个接口挂了，前端拿不到数据或者拿到的数据不够，页面展示就会出问题，出现空白或者某个模块直接天窗。
+用户因为网络问题或者安装了某些插件，导致页面广告、接口请求挂掉，从
+      </p>
+    </div>
+  </article>
+
+    
+  
+    
+    
+    
+    
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      
+<a href="/blog/2015/10/28/try-catch-runing-problem/" class="thumbnail">
+  
+    <span style="background-image:url(http://gtms04.alicdn.com/tps/i4/TB14IUrKXXXXXblXXXXlzJZ8pXX-900-500.jpg
+)" alt="try catch 对代码运行的性能影响" class="thumbnail-image"></span>
+  
+</a>
+
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
+        <p class="date"><time datetime="2015-10-27T23:09:56.000Z" itemprop="datePublished">2015-10-28</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/blog/2015/10/28/try-catch-runing-problem/" class="title">try catch 对代码运行的性能影响</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        
+起因要捕获 JavaScript 代码中的异常一般会采用 try catch，不过 try catch 的使用是否是对代码性能产生影响呢？答案是肯定有的，但是有多少不得而知。
+淘宝前端线上脚本错误的捕获方法：
+1234567window.JSTracker = window.JSTracker || [];try&#123;  //your code&#125;catch(e)&#123;  J
       </p>
     </div>
   </article>
@@ -181,6 +304,12 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
   
   <div class="widgets-container">
     
+      <div class="widget-wrap widget-wechat">
+  <a href="/blog/2015/10/27/node-subway/ ">
+    <img src="//img.alicdn.com/tps/TB13IRcKpXXXXXmXpXXXXXXXXXX-860-860.jpg_350x350.jpg" width="280" alt="扫码关注微信公众号『Node地下铁』" title="扫码关注微信公众号『Node地下铁』">
+  </a>
+</div>
+    
       
   <div class="widget-wrap">
     <h3 class="widget-title">最新文章</h3>
@@ -191,22 +320,22 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
             
             <div class="item-thumbnail">
               
-<a href="/blog/2015/10/27/node-subway/" class="thumbnail">
+<a href="/blog/2015/11/12/html-minify-service/" class="thumbnail">
   
-    <span style="background-image:url(https://img.alicdn.com/tps/TB10PrRKXXXXXXTXpXXXXXXXXXX-430-430.jpg
-)" alt="Node地下铁" class="thumbnail-image"></span>
+    <span style="background-image:url(http://img.alicdn.com/tps/TB1eBPqKpXXXXcwXXXXXXXXXXXX-900-500.jpg
+)" alt="HTML 压缩服务治理" class="thumbnail-image"></span>
   
 </a>
 
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/团队生活/">团队生活</a></p>
-              <p class="item-title"><a href="/blog/2015/10/27/node-subway/" class="title">Node地下铁</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a></p>
+              <p class="item-title"><a href="/blog/2015/11/12/html-minify-service/" class="title">HTML 压缩服务治理</a></p>
               
-              <p class="item-author">by 淘宝FED</p>
+              <p class="item-author">by 基德</p>
               
-              <p class="item-date">at <time datetime="2015-10-27T09:50:07.000Z" itemprop="datePublished">2015-10-27</time></p>
+              <p class="item-date">at <time datetime="2015-11-12T05:28:49.000Z" itemprop="datePublished">2015-11-12</time></p>
             </div>
           </li>
         
@@ -214,10 +343,56 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
             
             <div class="item-thumbnail">
               
-<a href="/blog/2015/10/27/enter-the-door-of-nodejs/" class="thumbnail">
+<a href="/blog/2015/11/11/flexbox-in-mobile-web/" class="thumbnail">
   
-    <span style="background-image:url(https://img.alicdn.com/tps/TB147_oKXXXXXawaXXXXXXXXXXX-640-480.jpg
-)" alt="致想用 Node.js 的你" class="thumbnail-image"></span>
+    <span style="background-image:url(https://img.alicdn.com/tps/TB1i_5SKpXXXXczXFXXXXXXXXXX-900-500.jpg
+)" alt="移动端开发小记 - Flexbox" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/无线开发/">无线开发</a></p>
+              <p class="item-title"><a href="/blog/2015/11/11/flexbox-in-mobile-web/" class="title">移动端开发小记 - Flexbox</a></p>
+              
+              <p class="item-author">by 凌恒</p>
+              
+              <p class="item-date">at <time datetime="2015-11-11T02:38:03.000Z" itemprop="datePublished">2015-11-11</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/blog/2015/11/10/nodejs-cluster-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://gtms04.alicdn.com/tps/i4/TB17WhrKpXXXXXiXpXX2AXZ8pXX-900-500.png
+)" alt="当我们谈论 cluster 时我们在谈论什么(下)" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a></p>
+              <p class="item-title"><a href="/blog/2015/11/10/nodejs-cluster-2/" class="title">当我们谈论 cluster 时我们在谈论什么(下)</a></p>
+              
+              <p class="item-author">by 淘杰</p>
+              
+              <p class="item-date">at <time datetime="2015-11-10T03:27:12.000Z" itemprop="datePublished">2015-11-10</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/blog/2015/11/09/web-performance/" class="thumbnail">
+  
+    <span style="background-image:url(https://img.alicdn.com/tps/TB1MByrKpXXXXc.aXXXXXXXXXXX-900-500.jpg
+)" alt="如何评价页面的性能" class="thumbnail-image"></span>
   
 </a>
 
@@ -225,11 +400,34 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Web开发/">Web开发</a></p>
-              <p class="item-title"><a href="/blog/2015/10/27/enter-the-door-of-nodejs/" class="title">致想用 Node.js 的你</a></p>
+              <p class="item-title"><a href="/blog/2015/11/09/web-performance/" class="title">如何评价页面的性能</a></p>
               
-              <p class="item-author">by 张挺</p>
+              <p class="item-author">by 溪夏</p>
               
-              <p class="item-date">at <time datetime="2015-10-27T07:13:58.000Z" itemprop="datePublished">2015-10-27</time></p>
+              <p class="item-date">at <time datetime="2015-11-09T03:14:41.000Z" itemprop="datePublished">2015-11-09</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/blog/2015/11/06/jstracker-data-processing/" class="thumbnail">
+  
+    <span style="background-image:url(http://gtms03.alicdn.com/tps/i3/TB1.AG_KpXXXXXdXXXX2AXZ8pXX-900-500.png
+)" alt="JSTracker 之异常数据处理" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/工具-平台/">工具&平台</a></p>
+              <p class="item-title"><a href="/blog/2015/11/06/jstracker-data-processing/" class="title">JSTracker 之异常数据处理</a></p>
+              
+              <p class="item-author">by 溪夏</p>
+              
+              <p class="item-date">at <time datetime="2015-11-06T11:03:57.000Z" itemprop="datePublished">2015-11-06</time></p>
             </div>
           </li>
         
@@ -242,7 +440,7 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Web开发/">Web开发</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/团队生活/">团队生活</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web开发/">Web开发</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/团队生活/">团队生活</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具-平台/">工具&平台</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/无线开发/">无线开发</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -252,17 +450,7 @@ Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -320,11 +508,24 @@ ga('send', 'pageview');
 <!-- End Google Analytics -->
 
 
+<script>
+// for baidu spider
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+// for baidu analysis
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?33dd75d7b88de8722970ea06fa5f06b0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
     
-
-<script src="/js/jquery-2.1.3.min.js" type="text/javascript"></script>
-
-
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 
 

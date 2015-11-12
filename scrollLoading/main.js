@@ -1,5 +1,5 @@
 (function($){
-
+  if($("#facebook")) return;
   // Image scroll loading
   $('.main-body-content img').each(function() {
     $(this).attr('data-url', $(this).attr('src'));
