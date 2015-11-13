@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淘宝前端团队（FED）]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://taobaofed.org/"/>
-  <updated>2015-11-12T05:29:03.000Z</updated>
+  <updated>2015-11-13T05:20:11.000Z</updated>
   <id>http://taobaofed.org/</id>
   
   <author>
@@ -15,11 +15,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[在 iOS 模拟器中调试 Web 页面]]></title>
+    <link href="http://taobaofed.org/blog/2015/11/13/web-debug-in-ios/"/>
+    <id>http://taobaofed.org/blog/2015/11/13/web-debug-in-ios/</id>
+    <published>2015-11-13T03:31:07.000Z</published>
+    <updated>2015-11-13T05:20:11.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB1Ml2nKpXXXXX0aXXXXXXXXXXX-900-500.png" alt="在 iOS 模拟器中调试 Web 页面"></p>
+<p>双十一大家“买买买”了吗？我猜你们要么是躺在沙发上，要么是躲在被窝里用手机和 Pad 下的单，因为我就是这么干的。当然我也不是瞎猜，天猫官方微博公布的数据为证：无线端交易额占比一路保持在 70% 以上，最后定格在 68%（据说峰值数据更是丧心病狂，具体数据未公布，大家猜猜吧）。</p>
+<p>“Mobile First” 真的已经不是喊喊口号而已！部分业务形态甚至直接 “Mobile Only” 了。当然所谓的 “Mobile” 绝不局限于 Native App，Web 页面仍是不可替代存在，我始终坚信不管是手机端还是其他终端 Web 模式依然代表着未来。</p>
+<p>不过开发手机上的 Web 页面调试一直是一个老大难问题。 虽然 Chrome DevTools 可以模拟手机的环境，但与真实环境差别还是比较大的，另外 Chrome 模拟的环境对 App 内 Webview 场景也无能为力（手机淘宝上的无线 Web 页面有非常多的功能需要调用 Webview 提供的 JSBridge 接口实现）。所以真机调试和模拟器调试是无线 Web 开发必备技能。</p>
+<p>真机相对复杂留到下次讲，今天我们先看看怎么在 iOS 模拟器里调试 Web 页面。</p>
+<p>iOS 模拟器（iOS Simulator）是捆绑在 Xcode 里的，所以这篇文章的操作系统环境仅限 Mac OS，且已安装 Xcode。强烈建议大家从 App Store 下载 Xcode，理由你们都懂。</p>
+<h2 id="启动_iOS_Simulator">启动 iOS Simulator</h2><p>常规的方式就是先启动 Xcode，再从 Xcode 菜单中启动模拟器。对于我们只是用模拟器来调试 Web 页面而言，每次都启动 Xcode 显然效率太低，是否可以跳过 Xcode 直接启动模拟器呢？</p>
+<p>虽然模拟器捆绑在 Xcode 中，但是本身是一个单独的应用程序，安装路径在：</p>
+<p><code>/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app</code></p>
+<p>Tips：上面是 Xcode 6 中的应用名，Xcode 7 已改名为：Simulator.app，路径不变。</p>
+<p>通过常规的方式启动模拟器后，发现 Dock 菜单上多出了一个模拟器的图标，这时即便退出 Xcode，模拟器任然能正常工作。为了方便下次开启模拟器，可以在 Dock 模拟器图标上右键选择：“在 Dock 中保留”，这样下次就可以通过直接点击图标启动了：</p>
+<p><img src="https://img.alicdn.com/tps/TB14vfIKpXXXXanXXXXXXXXXXXX-748-321.png" alt=""></p>
+<p>模拟器默认加载的是上次退出时使用的设备，需要更换的话到 “Hardware &gt; Device” 菜单下选择即可。</p>
+<p><img src="https://img.alicdn.com/tps/TB1IKzrKpXXXXaqXFXXXXXXXXXX-683-688.png" alt=""></p>
+<p>接下来就简单了，在模拟器中用 Safari 打开你要调试的页面，再打开 Mac 上的 Safari，在“开发 &gt; iOS Simulator”菜单下选中模拟器中打开的页面就可以调试了。如果没有“开发”菜单，请到“偏好设置 &gt; 高级”中开启。</p>
+<p><img src="https://img.alicdn.com/tps/TB1UwfpKpXXXXcqXFXXXXXXXXXX-1121-616.png" alt=""></p>
+<h2 id="在模拟器中安装_App">在模拟器中安装 App</h2><p>如果只是在手机上的 Safari 中调试页面，那么跟直接在 Mac 的 Safari 中并没有太大区别，完全没有必要花大力气在模拟器中搞。我们的最终目标是要调试 App Webview 中的 Web 页面，接下来我们看看怎么把 App 装到模拟器里，这里我们以手机淘宝 App 为例。</p>
+<p>模拟器上是没有 App Store 的，也不能下载 ipa 文件安装。只能安装基于源代码打包出来的 App Bundle，为了演示我已经预先从手机淘宝的 App 开发那里获得了名为： taobao.app 的 App Bundle。</p>
+<p>另外 Xcode 提供了一个 simctl 命令，可以对模拟器做各种操作。simctl 命令的路径是：</p>
+<p><code>/Applications/Xcode.app/Contents/Developer/usr/bin/simctl</code></p>
+<p>在终端执行命令：</p>
+<p><code>/Applications/Xcode.app/Contents/Developer/usr/bin/simctl install booted taobao.app</code> </p>
+<p><img src="https://img.alicdn.com/tps/TB1z6noKpXXXXaoXVXXXXXXXXXX-336-608.png" alt=""></p>
+<p>就可以把手机淘宝安装在前面启动的模拟器中了（参数 booted 指的是当前启动的模拟器）。嫌每次执行 simctl 的路径太长，可以使用 xcrun 命令，它会自动查找并启动已注册的 Xcode 命令行开发工具，比如：<code>xcrun simctl xxx</code>。</p>
+<p>App 安装好了，接下来我们让 App 打开我们要调试的页面，依旧还是使用 simctl 命令：</p>
+<p><code>xcrun simctl openurl booted taobao://h5.m.taobao.com/guang/index.html</code></p>
+<p>Tips：<code>taobao://</code> 是模拟器在安装 taobao.app 时注册的协议（scheme），当出现次协议的 URL 请求时默认会使用手机淘宝打开。不同的 App 在系统注册的协议各不相同，需要根据实际情况填写。如果需要在 Safari 中打开直接用 <code>http://</code> 协议头即可。</p>
+<p>OK，成功在手机淘宝的 Webview 打开页面。后面怎么做就不用教了吧！在 Mac 上打开 Safari， “开发 &gt; iOS Simulator” 菜单下选中模拟器中打开的页面，看图：</p>
+<p><img src="https://img.alicdn.com/tps/TB1Jn_vKpXXXXcUXpXXXXXXXXXX-1108-607.png" alt=""></p>
+<p>Tips：simctl 更多功能可以执行 <code>xcrun simctl help</code> 命令查看。</p>
+<h2 id="还有么有优化空间">还有么有优化空间</h2><p>在模拟器中安装 App，在 App 中打开 Web 页面都是在终端完成的，启动模拟器可不可以也在终端完成呢？答案是肯定的。</p>
+<p>前面已经提到其实模拟器是一个独立的应用程序，所以我们可以通过 Mac 自带的 open 命令来运行，命令如下：<code>open -a &quot;iOS Simulator&quot;</code>。还可以在启动的时候指定模拟哪个设备：<code>open -a &quot;iOS Simulator&quot; --args -CurrentDeviceUDID &lt;udid&gt;</code>。udid 可以通过命令：<code>xcrun simctl list</code> 获得，执行后会列出当前已下载的设备列表，如图：</p>
+<p><img src="https://img.alicdn.com/tps/TB1hh6iKpXXXXX0aXXXXXXXXXXX-806-299.png" alt=""></p>
+<p>中间那串数字就是 udid，启动设备为 “iPhone 4S” 的 iOS 模拟器，命令应该是这样的：</p>
+<p><code>open -a &quot;iOS Simulator.app&quot; --args -CurrentDeviceUDID &quot;FCE2CFE8-64C3-4DBE-906B-B9BF4180DE49&quot;</code></p>
+<p>如果已升级到 Xcode 7 命令为：</p>
+<p><code>open -a &quot;Simulator.app&quot; --args -CurrentDeviceUDID &quot;FCE2CFE8-64C3-4DBE-906B-B9BF4180DE49&quot;</code></p>
+<p>至此，“启动模拟器”、“安装 App”、“打开 Web 页面” 我们都可以通过终端命令执行了。不过每次调试都要执行一遍这一点都不符合前端爱装 “X” 的个性。也许你想到了把这些命令封装到一个 shell 脚本中，如果这是这样的话也太小看我们装 “X” 的功力了。</p>
+<p>现在不是“云”很火吗！我们也上个“云”。试想一下：所有的前端只要打开一个固定的网站，网站就会显示您当前系统支持启动哪些设备的 iOS 模拟器，只要在网站上轻轻一点本地的模拟器就启动起来了。不仅如此，网站还可以控制模拟器安装指定的 App，用指定的 App 打开的网页。像这样：</p>
+<p><img src="https://img.alicdn.com/tps/TB1hY2pKpXXXXblXVXXXXXXXXXX-716-450.png" alt=""></p>
+<p>这是淘宝前端团队内部系统：MDS（Mobile pages Develop &amp; Debug Solution）的一个局部界面（不知道大家有么有发现，文章写到这里，我的 Xcode 版本已经从 6 升级到了 7 ^ ^！吐槽下 App Store，真的很慢~~~）。</p>
+<p>光有个网站就能启动本地的模拟器那是气功大师才干的出来的事儿，配合网站还需要一个安装在本地电脑的 SDK（npm）。为了启动个模拟器搞个网站又搞个 SDK？如果你是这么认为的，那是真的认为我们只是在装 “X” 了。MDS 要处理的事情远远比想象地要多，比如本地怎么才能获取最新的手机淘宝 App Bundle。 另外，MDS 还集成了一个云端的 DevTools 工具，这块内容下次有机会再细讲。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="https://img.alicdn.com/tps/TB1Ml2nKpXXXXX0aXXXXXXXXXXX-900-500.png" alt="在 iOS 模拟器中调试 Web 页面"></p>
+<p>双十一大家“买买买”了吗？我猜你们要么是躺在沙发上]]>
+    </summary>
+    
+      <category term="debug" scheme="http://taobaofed.org/tags/debug/"/>
+    
+      <category term="iOS" scheme="http://taobaofed.org/tags/iOS/"/>
+    
+      <category term="mobile" scheme="http://taobaofed.org/tags/mobile/"/>
+    
+      <category term="工具&amp;平台" scheme="http://taobaofed.org/categories/%E5%B7%A5%E5%85%B7-%E5%B9%B3%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[HTML 压缩服务治理]]></title>
     <link href="http://taobaofed.org/blog/2015/11/12/html-minify-service/"/>
     <id>http://taobaofed.org/blog/2015/11/12/html-minify-service/</id>
     <published>2015-11-12T05:28:49.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://img.alicdn.com/tps/TB1eBPqKpXXXXcwXXXXXXXXXXXX-900-500.jpg" alt="HTML 压缩服务治理"></p>
 <h2 id="缘由">缘由</h2><p>笔者最近在研究如何实现页面 HTML 及内联 JS/CSS 的实时压缩功能。</p>
 <p>首先笔者尝试了在前端模块中扫描内联的 JS/CSS 并压缩，这样还可以集成至前端模块的上传工具中。观察了一段时间发现这样无法处理模板中的 JS/CSS，造成很多遗漏的 JS/CSS 不能压缩。</p>
@@ -62,7 +126,7 @@
     <link href="http://taobaofed.org/blog/2015/11/11/flexbox-in-mobile-web/"/>
     <id>http://taobaofed.org/blog/2015/11/11/flexbox-in-mobile-web/</id>
     <published>2015-11-11T02:38:03.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB1i_5SKpXXXXczXFXXXXXXXXXX-900-500.jpg" alt="移动端开发小记 - Flexbox"></p>
 <p>在开发移动端页面的时候，出去布局方便和减少代码量的考虑，使用了 Flexbox 的布局方式，在其中也遇到了一些问题，简单记录下。</p>
 <h2 id="什么是_Flexbox">什么是 Flexbox</h2><p>说到 Flexbox，大家应该都不陌生，网络上也有 N 多的教程。但是在这里还是简单说一下，就当回顾知识了吧。</p>
@@ -160,7 +224,7 @@
     <link href="http://taobaofed.org/blog/2015/11/10/nodejs-cluster-2/"/>
     <id>http://taobaofed.org/blog/2015/11/10/nodejs-cluster-2/</id>
     <published>2015-11-10T03:27:12.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms04.alicdn.com/tps/i4/TB17WhrKpXXXXXiXpXX2AXZ8pXX-900-500.png" alt="当我们谈论 cluster 时我们在谈论什么(下)"></p>
 <p><a href="http://taobaofed.org/blog/2015/11/03/nodejs-cluster/">上篇文章</a>讲解了 Node.js 中多进程部署时遇到的各种问题，那么实际的线上项目中到底是如何利用多进程，如何保障各个 worker 进程稳定性的呢，又是如何利用 cluster 模块 fork 子进程，父子进程间又是如何实现通信的呢？本篇就来一一揭晓。</p>
 <h2 id="负载均衡">负载均衡</h2><p>回忆一下上篇中提到的最初 Node.js 多进程模型，多个进程绑定同一端口，相互竞争 accpet 新到来的连接。由于无法控制一个新的连接由哪个进程来处理，导致各 worker 进程之间的负载非常不均衡。</p>
@@ -248,7 +312,7 @@
     <link href="http://taobaofed.org/blog/2015/11/09/web-performance/"/>
     <id>http://taobaofed.org/blog/2015/11/09/web-performance/</id>
     <published>2015-11-09T03:14:41.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB1MByrKpXXXXc.aXXXXXXXXXXX-900-500.jpg" alt="如何评价页面的性能"></p>
 <h2 id="引言">引言</h2><p>前端页面的性能一直都是一个热议的话题，从老早的“军规”开始我们就一直在关注页面的性能问题。</p>
 <p>在前面巨人们的身后每个人也有自己的一些页面性能的经验，本文主要是介绍如何评估页面加载完成之后的性能。</p>
@@ -366,7 +430,7 @@
     <link href="http://taobaofed.org/blog/2015/11/06/jstracker-data-processing/"/>
     <id>http://taobaofed.org/blog/2015/11/06/jstracker-data-processing/</id>
     <published>2015-11-06T11:03:57.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms03.alicdn.com/tps/i3/TB1.AG_KpXXXXXdXXXX2AXZ8pXX-900-500.png" alt="JSTracker 之异常数据处理"></p>
 <p>上一篇：<a href="http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/">JSTracker 之前端异常数据采集</a></p>
 <p>前文已经解决了采集数据的问题了，但是采集到的数据不做分析是体现不出价值的。接下来会介绍 JSTracker 的数据处理部分。</p>
@@ -435,7 +499,7 @@
     <link href="http://taobaofed.org/blog/2015/11/05/nodejs-errors/"/>
     <id>http://taobaofed.org/blog/2015/11/05/nodejs-errors/</id>
     <published>2015-11-05T02:24:01.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="//gtms03.alicdn.com/tps/i3/TB16M4LKpXXXXcEXFXX2AXZ8pXX-900-500.png" alt="Node.js 常见网络错误信息"></p>
 <h2 id="1-介绍">1.介绍</h2><p>熟悉 Node.js 的同学一定见过 <code>ETIMEDOUT</code>、<code>EADDRINUSE</code> 等错误提示，那么这些错误信息到底是什么呢？答案其实很简单，因为 Node.js 底层使用的是<a href="http://www.gnu.org/software/libc/" target="_blank" rel="external"> glibc 库</a>，这些错误信息都是 glibc 库在 socket 连接时使用的 connect 函数中定义的错误类型，当然，v8在使用glibc库时也会加入一些自定义的错误类型，但许多错误情况还是和glibc中的定义一致的。</p>
 <p><code>connect</code> 函数的定义为：<code>int connect (int socket, struct sockaddr addr, socklen_t length)</code></p>
@@ -498,7 +562,7 @@
     <link href="http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/"/>
     <id>http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/</id>
     <published>2015-11-04T01:48:28.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms02.alicdn.com/tps/i2/TB1fEFLKpXXXXa2XXXXlzJZ8pXX-900-500.jpg" alt="rem 产生的小数像素问题"></p>
 <p>由于日常需求以无线居多，所以可以在业务中做一些尝试，如 rem，刚接触这个特性的时候，曾经一度爱不释手，仿佛在无线开发的坎坷路上寻找到一条捷径。然而随着使用范围的扩大，慢慢的发现了一些使用 rem 带来的问题。</p>
 <h3 id="rem">rem</h3><p>关于 rem 这个单位的介绍，在此就不赘述，有兴趣的同学可以阅读一丝的<a href="http://ued.taobao.org/blog/2013/05/rem-font-size/" target="_blank" rel="external">《响应式十日谈第一日：使用 rem 设置文字大小》</a>，文章对 rem 进行了详细的介绍。</p>
@@ -604,7 +668,7 @@
     <link href="http://taobaofed.org/blog/2015/11/03/nodejs-cluster/"/>
     <id>http://taobaofed.org/blog/2015/11/03/nodejs-cluster/</id>
     <published>2015-11-03T01:38:25.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms04.alicdn.com/tps/i4/TB17WhrKpXXXXXiXpXX2AXZ8pXX-900-500.png" alt="当我们谈论 cluster 时我们在谈论什么(上)"></p>
 <p>Node.js 诞生之初就遭到不少这样的吐槽，当然这些都早已不是问题了。</p>
 <blockquote>
@@ -665,7 +729,7 @@
     <link href="http://taobaofed.org/blog/2015/11/02/buy-component/"/>
     <id>http://taobaofed.org/blog/2015/11/02/buy-component/</id>
     <published>2015-11-02T05:44:27.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB1FYNoKpXXXXc_XpXXXXXXXXXX-900-500.jpg" alt="已买到的宝贝前端组件化探索"></p>
 <p>随着已买到的宝贝组件化全网回归完成，项目开发工作终于告一段落了，接下来便是 Beta ，灰度发布。我也终于有了时间来总结一下整个项目。</p>
 <p>同学们普遍对 PC 业务如何进行组件化感兴趣，在此就把我在项目中的思考过程，积累的经验写出来与大家分享。</p>
@@ -909,7 +973,7 @@
     <link href="http://taobaofed.org/blog/2015/10/30/nodejs-timer/"/>
     <id>http://taobaofed.org/blog/2015/10/30/nodejs-timer/</id>
     <published>2015-10-30T08:05:19.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms04.alicdn.com/tps/i4/TB1meIvKXXXXXayXpXX2AXZ8pXX-900-500.png" alt="timer 的优化故事"></p>
 <p>前段时间 Node.js 发布了新版本 4.0，其中涉及到一个更新比较多的模块，那就是下面要介绍的 timer 模块。</p>
 <blockquote>
@@ -992,7 +1056,7 @@
     <link href="http://taobaofed.org/blog/2015/10/29/deep-into-node-1/"/>
     <id>http://taobaofed.org/blog/2015/10/29/deep-into-node-1/</id>
     <published>2015-10-29T07:44:30.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB1v9UnKXXXXXc5XXXXXXXXXXXX-900-500.png" alt="Node.js 探秘（一）- 初识单线程的 Node.js"></p>
 <h2 id="前言">前言</h2><p>从Node.js进入人们的视野时，我们所知道的它就由这些关键字组成 <strong>事件驱动、非阻塞I/O、高效、轻量</strong>，它在官网中也是这么描述自己的。</p>
 <blockquote>
@@ -1132,7 +1196,7 @@
     <link href="http://taobaofed.org/blog/2015/10/28/disaster-recovery-at-taobao-home-page/"/>
     <id>http://taobaofed.org/blog/2015/10/28/disaster-recovery-at-taobao-home-page/</id>
     <published>2015-10-28T02:23:53.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms02.alicdn.com/tps/i2/TB1uf_3KXXXXXcLXVXXlzJZ8pXX-900-500.jpg" alt="淘宝首页兜底容灾方案"></p>
 <p>淘宝首页是淘宝的一个大流量入口，平均每天的 PV 量达到一亿。而页面上的数据很多都是通过接口调用，不同的接口对应着不同的系统，每个系统的稳定性是不太一样的。</p>
 <h3 id="一、兜底容灾的必要性">一、兜底容灾的必要性</h3><p>一个日均承载一亿流量的网页，会经常出现哪些问题呢？</p>
@@ -1204,7 +1268,7 @@
     <link href="http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/"/>
     <id>http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/</id>
     <published>2015-10-27T23:11:43.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms01.alicdn.com/tps/i1/TB1wsEtKXXXXXXTXXXXlzJZ8pXX-900-500.jpg" alt="JSTracker 之前端异常数据采集"></p>
 <h2 id="JSTracker_-_淘宝前端监控平台">JSTracker - 淘宝前端监控平台</h2><p>基本上服务器端的代码都是处于 7x24 小时的实时监控状态的，一旦有任何异常对应的开发同学就马上收到报警，并且第一时间处理。 但是对于前端来说，往往是实际用户那里的脚本报错后才知道页面出现异常，这时候已经是故障了。</p>
 <p>为了让前端也能和后端一样，需要将线上的 JavaScript 代码监控起来，当用户端浏览器出现异前端第一时间被通知到。于是便有了淘宝前端的监控平台：JSTracker。</p>
@@ -1263,7 +1327,7 @@
     <link href="http://taobaofed.org/blog/2015/10/28/try-catch-runing-problem/"/>
     <id>http://taobaofed.org/blog/2015/10/28/try-catch-runing-problem/</id>
     <published>2015-10-27T23:09:56.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms04.alicdn.com/tps/i4/TB14IUrKXXXXXblXXXXlzJZ8pXX-900-500.jpg" alt="try catch 对代码运行的性能影响"></p>
 <h2 id="起因">起因</h2><p>要捕获 JavaScript 代码中的异常一般会采用 try catch，不过 try catch 的使用是否是对代码性能产生影响呢？答案是肯定有的，但是有多少不得而知。</p>
 <p>淘宝前端线上脚本错误的捕获方法：</p>
@@ -1335,7 +1399,7 @@
     <link href="http://taobaofed.org/blog/2015/10/28/auto-layout-in-h5-project/"/>
     <id>http://taobaofed.org/blog/2015/10/28/auto-layout-in-h5-project/</id>
     <published>2015-10-27T22:18:10.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://gtms02.alicdn.com/tps/i2/TB15IMmKXXXXXXzXpXX2AXZ8pXX-900-500.png" alt="Are u ok？---记一次H5项目的安卓适配"></p>
 <h3 id="Are_u_ok_?">Are u ok ?</h3><p>当雷布斯难以和台下的印度粉丝语言沟通的时候，他不由自主地向台下的米粉呐喊Are u ok 抒发他不能讲中文却无比激动的情绪。</p>
 <p>当我看到那台老款安卓机上的H5页面的时候，我也想对它说 Are u ok? </p>
@@ -1461,7 +1525,7 @@
     <link href="http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/"/>
     <id>http://taobaofed.org/blog/2015/10/27/enter-the-door-of-nodejs/</id>
     <published>2015-10-27T07:20:12.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/i2/TB1Q5gmKXXXXXXCXpXXlzJZ8pXX-900-500.jpg" alt="致想用 Node.js 的你"></p>
 <p>Node.js，09 年这个集成了 Google V8 JavaScript 引擎和一个底层 I/O API 的项目，如今项目无数，大企业也纷纷尝试。</p>
 <p>Node.js 有如得到了金陵才子一般，忽然间就在大街小巷中风靡开来，诱人的滋味感觉谁都想咬一口，虽然其他语言的酸葡萄理论开始蔓延，但是依旧没有影响到它的推广和发展。在强大的 PHP 和稳定的 Java 之中，慢慢的发芽并占有了一席之地。</p>
@@ -1493,7 +1557,7 @@
     <link href="http://taobaofed.org/blog/2015/10/27/node-subway/"/>
     <id>http://taobaofed.org/blog/2015/10/27/node-subway/</id>
     <published>2015-10-27T06:00:23.000Z</published>
-    <updated>2015-11-12T05:29:03.000Z</updated>
+    <updated>2015-11-13T05:20:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://img.alicdn.com/tps/TB13N.dKXXXXXaTXFXXXXXXXXXX-900-500.png" alt="Node地下铁"></p>
 <p>没有一种语言是不朽的，Node.js 也是，但冷静的思辨无价。</p>
 <p>这里是由淘宝前端团队（FED）发起的 Node.js 爱好者的地下聚集社区，产出我们在 Node.js 实践中的原创思考和片面观点。</p>
